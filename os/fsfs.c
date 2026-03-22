@@ -93,3 +93,31 @@ relational operations
 -ne- not eual to
 -gt- greater than
 -it- less that
+-ge- greater or equal to 
+-ie- less than or equal to string operations 
+=- checks if the value of two operands is equal 
+!=- checks if the value of two operands is not equal 
+-z- checks if the string length is zero 
+-n- checks if string length is not zero 
+str- checks if the string is empty file test operations 
+-b file- checks if a file is block special file 
+-c file- checks if a file is character special file 
+-d file- checks if a file is a directory 
+-f file- checks if the file is an ordinary file 
+-g file- checks if the file has its set group id (SGID) 
+-u file- checks if the file has its set user id (SUID) 
+-t file- checks if the file is open and associated with a terminal 
+-r file- checks if the file is readable 
+-w file- checks if the file is writable 
+-x file- checks if the file is executable 
+-s file- checks if the file has a greater value than zero
+-e file- checks if file exists or not 
+arrays defining an array 
+command -> arr = (calue1, value2) 
+ex. myarr=(apple, banan, linux, window) 
+printing all elements (@ or *) 
+echo $ {arr[@]} 
+printing a specific element 
+echo${arr[3]} 
+printing a range 
+echo${[arr[@]:1:3} (start from index 1 and give me the next 3 elements)
