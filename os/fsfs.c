@@ -121,3 +121,21 @@ printing a specific element
 echo${arr[3]} 
 printing a range 
 echo${[arr[@]:1:3} (start from index 1 and give me the next 3 elements)
+cat>west- create the following file with name "west"
+cat>coast- create the following file with the name "coast" with the contents
+sort west> sor_west- sort the above two files and store the output in "sor_west" and "sor_west"
+cmp sor_west sor_coast sor_west sor_coast differ: byte 1, line 1- compare the two files"sor_west and sor_coast" and check whether they differ
+cmp -l sor_west sor_coast- compare the two files "sor_west and sor_coast" byte by byte and display its octal value
+comm sor_west sor_coast- display the lines unique to file "sor_west" lines unique to file "sor_coast "and lines common to both
+comm -23 sor_west sor_coast- display the lines which are unique to file "sor_west"
+comm -13 sor_west sor_coast- display the lines which are unique to file "sor_coast"
+comm -12 sor_west sor_coast- display the files which are common to both files
+diff sor_west sor_coast- display the differnces of lines between the two files "sor_west " and "sor_coast" in context form
+
+
+
+
+
+
+
+
