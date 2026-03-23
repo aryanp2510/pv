@@ -81,6 +81,8 @@ os.write(b);
 }
 }
 open zenmap(command)- nmap -p 9000 192.168.1.5(the ipv4 address)
+target- 192.168.2.57
+command- nmap -p 9000 192.168.2.57
 Wireshark -ICMP,TCP
 Step1: start wire shark and double click on ethernet
 Step2: It will give you some packets then click on stop button and add filter ICMP and click on shark sign then go to command prompt and give one command to trace
