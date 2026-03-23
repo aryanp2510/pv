@@ -1,138 +1,140 @@
-calendar of current month- cal
-calender of month july of 1998- cal 07 1998
-todays date- date
-date as mm/dd/yyyy- date +%D
-current hour min ans second- date +%H, date +%M, date +%S
-day of the week- day +%A
-time in am/pm notation- day +%r
-all users currently logged in- who
-login name of current terminal- whoami
-terminal file of current terminal- tty
-display msg "hello world"- echo "hello world"
-ls- list of all files and directories
-ls -l- list of all files and directories in multi coloumn format
-ls-F- identifies directories and executable files
-ls -a- shows all content including hidden files
-ls -r- recursive list of all files and directories
-ls -t- list of all files according to modification time
-ls -tr- list of all files in reverse order
-ls -X- sorts files according to their extensions
-ls -Xr- sorts files in reverse order
-ls ??- files with exactly 2 characters (jitna ? utna no. of characters)(*a=end, a*=start, ^=do not)
-ls a*- files starting with lowercase a
-ls B*- files starting with uppercase B
-ls *i- files ending with lowercase i 
-ls [a,e,i,o,u]*- files starting with vowels
-ls *[a,e,i,o,u]- files ending with vouwels
-ls [^a,e,i,o,u]*- files which do no start with vowels
-ls [1-9]*- files which start with the digits in the range of 1-9
-ls [A,E,I,O,U]*[0-9]- files that start with uppercase vowels and ends with a digit in the range of 0-9
-uname- displays the name of the os
-uname -a- prints all system info including kernel version
-uname -n- prints network node
-uname -r- displays kernel release date
-id- displays UID of current user
-whoami- displays username of the user who is currently logged in
-chmod u+x file(filename)- assigns and exucutes permission to the user
-chmod u-x file- removes permission from the user
-chmod a+x file- assign and execute permission to all
-chmod a-x file- remove permission from all
-chmod g+w file- assign write permission
-chmod g-w file- removes write permission
-chmod g+r file- assign read permission
-chmod g-r file- remove read permission
-ownership
-chown- change ownership of file
-chgrp- change group permission of file
-admin
-su- switches current user sessions to superuser
-mv file1 file2- rename
-rm file- delete
-r- read (r=4)
-w- write (w=2)
-x- execute (x=1)
-(-)-permission denied (-=0)
-(fullcontrol) rwx- 4+2+1=7
-(read and write) (rw-)- 4+2+0=6
-(read and execute) r-x- 4+0+1=5
-(only read) (r--)- 4+0+0=4
-file information and counting
-file*- finds all types of files
-we [files]- displays no. of lines, words and characters in the file
-we -l[file]- counts only no. of lines
-we -w[file]- counts only the no. of words
-we -c[file]- counts only no.of characters
-accesing a value
-NAME = "apple"
- echo $ NAME
-read-only variable
-NAME = "apple"
- readonly NAME
-NAME="banana"
- echo $ NAME
-unsetting/ removing a variable
-NAME = "apple"
- unset NAME
- echo $ NAME
-+- addition
-(-)- subtraction
-*- multiplication
-/ (division)- divides left operand by right operand (b/a)
-% (modulus)- divides left operand by right operand and leaves a remainder(b%a)
-= (assignment)- assigns right operand to left operand(assigns value of b to a)
-== (equality- compares two numbers and based on it returns true
-!= (not equality)- compares two numbers and based on it returns false
-ex a=10, b=20
-val= 'expr $a +$b'
-echo "$a +$b = $val"
-if [&a==$b]
-then
-echo "ais equal to $b"
-relational operations
--eq- equal to
--ne- not eual to
--gt- greater than
--it- less that
--ge- greater or equal to 
--ie- less than or equal to string operations 
-=- checks if the value of two operands is equal 
-!=- checks if the value of two operands is not equal 
--z- checks if the string length is zero 
--n- checks if string length is not zero 
-str- checks if the string is empty file test operations 
--b file- checks if a file is block special file 
--c file- checks if a file is character special file 
--d file- checks if a file is a directory 
--f file- checks if the file is an ordinary file 
--g file- checks if the file has its set group id (SGID) 
--u file- checks if the file has its set user id (SUID) 
--t file- checks if the file is open and associated with a terminal 
--r file- checks if the file is readable 
--w file- checks if the file is writable 
--x file- checks if the file is executable 
--s file- checks if the file has a greater value than zero
--e file- checks if file exists or not 
-arrays defining an array 
-command -> arr = (calue1, value2) 
-ex. myarr=(apple, banan, linux, window) 
-printing all elements (@ or *) 
-echo $ {arr[@]} 
-printing a specific element 
-echo${arr[3]} 
-printing a range 
-echo${[arr[@]:1:3} (start from index 1 and give me the next 3 elements)
-cat>west- create the following file with name "west"
-cat>coast- create the following file with the name "coast" with the contents
-sort west> sor_west- sort the above two files and store the output in "sor_west" and "sor_west"
-cmp sor_west sor_coast sor_west sor_coast differ: byte 1, line 1- compare the two files"sor_west and sor_coast" and check whether they differ
-cmp -l sor_west sor_coast- compare the two files "sor_west and sor_coast" byte by byte and display its octal value
-comm sor_west sor_coast- display the lines unique to file "sor_west" lines unique to file "sor_coast "and lines common to both
-comm -23 sor_west sor_coast- display the lines which are unique to file "sor_west"
-comm -13 sor_west sor_coast- display the lines which are unique to file "sor_coast"
-comm -12 sor_west sor_coast- display the files which are common to both files
-diff sor_west sor_coast- display the differnces of lines between the two files "sor_west " and "sor_coast" in context form
-
-
+ubuntu
+ping- ping -i 5 google.com
+ping -c 5 google.com- Send 5 packets and stop ping also note the ipaddress
+ping -s 100 google.com- Change the ping packet size.
+ping -w 5 localhost- Set the timeout for ping to 5 secs.
+ping 192.168.2.1 192.168.2.228 localhost- Specify path of ip addresses for ping to send the packet
+command prompt
+tracert www.google.com- tracing route of the link
+tracert -h 2 www.google.com- Display information of only two hops on route
+ubuntu
+netstat- netstat (network statistics) is a command line tool for monitoring network connections both incoming and outgoing
+netstat -at- TCP ports connections
+netstat -au- UDP ports connections
+netstat -l- All listening connections
+netstat -lt- TCP listening ports
+netstat -s- Show statistics by protocol
+netstat -su- Show statistics by UDP protocol
+netstat -r- Kernel IP routing
+command prompt
+arp -a- Display the contents of the arp table
+arp -s 157.55.85.212 00-aa-00-62-c6-0- Add a entry to arp table
+arp -a -v- Display whether the entries are valid or invalid
+arp -d 157.55.85.212- Delete any one invalid entry
+ipconfig- Displays information about all network interfaces currently in operation
+ipconfig /all- Find the physical address of the machine.
+zenmap
+Run a java client-server java application Use zenmap to scan
+the open port of server and communicate with it.
+Step 1 Execute the java server application on machine 1 with
+port number 9000 ‘TcpServer.java’
+Step 2 Use zenmap tool on machine 2 to scan the machine 1 ip
+to find open port 9000
+Step 3 Note the client connected message in server program
+on machine 1 as the zenmap is taken as client
+Step 4 Execute client program on machine 2 to chat with server
+.Set windows firewall off on both machines. Put the ip or
+computer name of machine 1 in socket address
+Code
+TcpServer.java
+import java.net.*;
+import java.io.*;
+public class TcpServer
+{
+public static void main(String arg[]) throws Exception
+{
+OutputStream os;
+System.out.println("SERVER");
+ServerSocket ss=new ServerSocket(9000);
+Socket s1=ss.accept();
+os=s1.getOutputStream();
+byte b[]=new byte[1000];
+System.out.println("Client Connected .");
+System.out.println("Enter ur message .");
+System.in.read(b,0,b.length);
+os.write(b);
+InputStream is=s1.getInputStream();
+BufferedReader br=new BufferedReader(new
+InputStreamReader(is));
+System.out.println(br.readLine());
+}
+}
+TcpClient.java
+import java.net.*;
+import java.io.*;
+public class TcpClient
+{
+public static void main(String arg[]) throws Exception
+{
+System.out.println("CLIENT");
+byte b[]=new byte[1000];
+Socket s1=new Socket("COmputername OR
+IP",9000);
+System.out.println("Server Found");
+InputStream is=s1.getInputStream();
+BufferedReader br=new BufferedReader(new
+InputStreamReader(is));
+System.out.println(br.readLine());
+OutputStream os=s1.getOutputStream();
+System.in.read(b,0,1000);
+os.write(b);
+}
+}
+open zenmap(command)- nmap -p 9000 192.168.1.5(the ipv4 address)
+Wireshark -ICMP,TCP
+Step1: start wire shark and double click on ethernet
+Step2: It will give you some packets then click on stop button and add filter ICMP and click on shark sign then go to command prompt and give one command to trace
+Step3: copy IP address from command prompt and write in filter ip.addr== (your ip address) then it will show you that ip address
+Step4: now do the same for tcp but for tcp you have to use netstat command in commam=nd prompt after that apply filter tcp it will show you
+Step5: for TCP you have to connect client server with two pcs for that you have to write code from second practical and then give command ipconfig in command prompt
+Step6: after this you have to take ip of server and write it into clients code after that run it in command prompt
+Step9: after that you have to apply tcp filter and then apply again tcp.port==9000 it will give you some packets right click on last server and do follow then it will show you the message
+Wireshark -http,IP,UDP
+Step1: start wireshark and select ethernet
+Step2: give filter ip and after that give any ip address
+Step3: do tracert (your site starting from www ) trace ip in command prompt then copy it to filter ip.addr== ip address
+Step4: now do for udp ou have to search for udp and then click on analyze and click on display expression after that search for udp
+Step5: then select udp.datagram protocol and select udp.checksum.status after that do click on good and ok
+Step6: double click on any address and then it will show you but if it is not showing then right click and then go to protocol preference and user datagram protocol and validate it then it will show you the status
+Step7: do same for http
+ipv4 adress- 192.168.1.10, 192.168.1.11, 192.168.2.10, 192.168.2.2
+Connecting Wired and Wireless Network- 4 pcs, 2 switches, 1 routers, 1 laptop, wireless router
+Design the network in packet tracer based on attached image
+Steps
+Take router, PCs and switch > connect them using copper straight through > set ip address of router by choosing config and in that fastEthernet0/0 
+Now go to physical in router > and place that chip in the router while switch is off and then on the switch
+Set the ip address of PCs by going in FastEthernet0 > then set
+the default gateway same as the router’s ip address
+Dns : Domain Name System
+DNS converts domain names into IP addresses. From a
+security perspective, it helps you identify malware trying to
+contact suspicious servers or detect DNS spoofing where an
+attacker sends you to a fake version of a website.
+● tcp.port==80
+It shows all TCP packets that are using port 80.
+TCP is a connection-oriented protocol that ensures:
+● Data arrives in order
+● No data is lost or duplicated
+● Communication happens between verified endpoints
+● Arp
+ARP appears in Wireshark because it’s essential for
+resolving IP addresses to MAC addresses, enabling local
+network communication, troubleshooting connectivity, and
+detecting network attacks.
+Zen map
+● nmap -T4 -A -v
+Performs a fast, aggressive, verbose scan that:
+● Identifies open ports
+● Detects running services and versions
+● Attempts to identify the operating system
+● Runs default vulnerability and info scripts
+● Shows the network path to the target
+● nmap -T4 -A -v -Pn
+● Treats the target as online
+● Skips ICMP ping, TCP ping, ARP ping
+Why this matters:
+● Useful when firewalls block ping
+● Prevents Nmap from skipping “silent” hosts
 
 
 
